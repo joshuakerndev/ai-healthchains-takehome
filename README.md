@@ -5,7 +5,7 @@ Role: Senior Web3 MERN Stack Developer Candidate
 
 This project implements the required patient management, statistics, transaction history, and consent management features using React, a mock Express backend, and MetaMask-based message signing.
 
-✅ Implemented Features
+Implemented Features
 
 Patients
 - Search + pagination using /api/patients
